@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US Weather Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>US Weather Dashboard</h1>
+    <p class="subtitle">Powered by the National Weather Service</p>
+    <button id="refresh-btn" class="refresh-btn">Refresh</button>
+  </header>
+
+  <main>
+    <div id="last-updated" class="last-updated"></div>
+    <div id="error-banner" class="error-banner hidden"></div>
+    <div id="city-grid" class="city-grid">
+      <!-- Cards injected by app.js -->
+    </div>
+  </main>
+
+  <!-- Detail modal -->
+  <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 id="modal-city-name"></h2>
+          <p id="modal-city-state" class="modal-subtitle"></p>
+        </div>
+        <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-tabs">
+        <button class="tab-btn active" data-tab="hourly">24-Hour Forecast</button>
+        <button class="tab-btn" data-tab="7day">7-Day Forecast</button>
+      </div>
+      <div id="modal-loading" class="modal-loading hidden">Loading forecast data…</div>
+      <div id="modal-error" class="modal-chart-error hidden"></div>
+      <div id="tab-hourly" class="tab-panel">
+        <canvas id="chart-hourly"></canvas>
+      </div>
+      <div id="tab-7day" class="tab-panel hidden">
+        <canvas id="chart-7day"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Data sourced from <a href="https://www.weather.gov" target="_blank" rel="noopener">weather.gov</a></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
