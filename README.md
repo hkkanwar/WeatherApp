@@ -144,4 +144,4 @@ Logs are written to the `logs/` directory (gitignored):
 - Port frontend to React for component reuse and maintainability
 - Could add a map with city pins
 - Additional features like plan my trip
-- Persist grid cache to Redis for multi-instance deployments
+- grid cache currently brings no actual value but we could implement it for the charts as well
