@@ -2,6 +2,8 @@
 
 A simple web application that displays real-time weather data for five major US cities using the [National Weather Service API](https://www.weather.gov/documentation/services-web-api).
 
+Accessible via: https://nws-weather-dashboard.up.railway.app/ 
+
 ## Features
 
 - Live weather data for Miami, New York, Chicago, Los Angeles, and Dallas
@@ -45,7 +47,7 @@ weatherApp/
 └── README.md
 ```
 
-## Getting Started
+## Getting Started (For Local Developement
 
 ### Prerequisites
 
@@ -140,6 +142,6 @@ Logs are written to the `logs/` directory (gitignored):
 ## Future Improvements
 
 - Port frontend to React for component reuse and maintainability
-- Add hourly forecast view
-- Add a map with city pins
+- Could add a map with city pins
+- Additional features like plan my trip
 - Persist grid cache to Redis for multi-instance deployments
